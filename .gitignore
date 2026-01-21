@@ -1,0 +1,14 @@
+# Dataset e output generati
+data/
+outputs/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Ambiente editor
+.vscode/
+
+# File temporanei di sistema
+.DS_Store
+Thumbs.db
