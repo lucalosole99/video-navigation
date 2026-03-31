@@ -49,8 +49,8 @@ def read_video(video_path: str, save_annotated: bool = False, loop: bool = True)
 
     # Fallback FPS se non valido
     if not fps or fps <= 0:
-        fps = 25.0  # fallback ragionevole su Windows
-
+        fps = 25.0  
+        
     duration_sec = (total_frames / fps) if total_frames > 0 else 0.0
 
     print("=" * 60)
@@ -71,13 +71,13 @@ def read_video(video_path: str, save_annotated: bool = False, loop: bool = True)
     print("- S: Salva frame corrente (in outputs/frames/)")
     print("=" * 60)
 
-    # Output video annotato (opzionale)
+    # Output video annotato
     writer = None
     out_path = None
     if save_annotated and width > 0 and height > 0:
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         out_path = outputs_dir / f"annotated_{ts}.mp4"
-        fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # generalmente OK su Windows
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v") 
         writer = cv2.VideoWriter(str(out_path), fourcc, fps, (width, height))
         if not writer.isOpened():
             print("[WARN] Impossibile creare VideoWriter. Continuo senza salvare il video annotato.")

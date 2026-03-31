@@ -36,11 +36,12 @@ Il codice attuale serve come strumento di debug e ispezione dei dati video per l
 
 ## Setup dell’ambiente
 
+Per eseguire lo script è necessario installare Conda o Miniconda e creare l'ambiente.
+
 **Creazione dell’ambiente Conda**:
 
 conda env create -f environment.yml
-conda activate 
-
+conda activate video_nav
 
 **Utilizzo dello script video**:
 
